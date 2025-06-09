@@ -51,8 +51,14 @@ function App() {
     const realKey = `R_${realIndex}`;
     const fakeKey = `F_${fakeIndex}`;
 
-    const real = { src: `/image/REAL/${realKey}.jpg`, type: "REAL" };
-    const fake = { src: `/image/FAKE/${fakeKey}.jpg`, type: "FAKE" };
+    const real = {
+      src: `/project08_UIUX_final_lecture/image/REAL/R_${realIndex}.jpg`,
+      type: "REAL",
+    };
+    const fake = {
+      src: `/project08_UIUX_final_lecture/image/FAKE/F_${fakeIndex}.jpg`,
+      type: "FAKE",
+    };
 
     const shuffled = Math.random() > 0.5 ? [real, fake] : [fake, real];
     setImagePair(shuffled);
